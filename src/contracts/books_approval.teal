@@ -102,7 +102,7 @@ int 4
 ==
 assert
 txn Note
-byte "books:uv1"
+byte "books:uv301"
 ==
 assert
 txna ApplicationArgs 3

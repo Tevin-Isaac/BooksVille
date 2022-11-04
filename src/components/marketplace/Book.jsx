@@ -6,7 +6,7 @@ import Identicon from "../utils/Identicon";
 
 const Book = ({ address, book, buyBook, deleteBook, likeBook,
     dislikeBook, }) => {
-    const { name, image, description, price, sold, appId, owner,} =
+    const { name, image, description, price, sold, likes, dislikes, appId, owner,} =
         book;
 
     const [count, setCount] = useState(1)
@@ -21,6 +21,13 @@ const Book = ({ address, book, buyBook, deleteBook, likeBook,
                         <Badge bg="secondary" className="ms-auto">
                             {sold} Sold
                         </Badge>
+                        <div><Badge bg="secondary" className="ms-auto">
+                            {likes} Likes
+                        </Badge>
+                        <Badge bg="secondary" className="ms-auto">
+                            {dislikes} Dislikes
+                        </Badge></div>
+                        
                     </Stack>
                 </Card.Header>
                 <div className="ratio ratio-4x3">
