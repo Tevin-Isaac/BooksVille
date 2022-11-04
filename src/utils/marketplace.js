@@ -149,7 +149,7 @@ export const likeAction = async (senderAddress, book) => {
     let params = await algodClient.getTransactionParams().do();
   
     // Build required app args as Uint8Array
-    let likesArg = new TextEncoder().encode("likes");
+    let likesArg = new TextEncoder().encode("like");
   
     let appArgs = [likesArg];
   
@@ -196,7 +196,7 @@ export const dislikesAction = async (senderAddress, book) => {
     let params = await algodClient.getTransactionParams().do();
   
     // Build required app args as Uint8Array
-    let dislikesArg = new TextEncoder().encode("dislikes");
+    let dislikesArg = new TextEncoder().encode("dislike");
   
     let appArgs = [dislikesArg];
   
@@ -341,12 +341,12 @@ const getApplication = async (appId) => {
         if (getField("SOLD", globalState) !== undefined) {
             sold = getField("SOLD", globalState).value.uint
         }
-        if (getField("Likes", globalState) !== undefined) {
-            likes = getField("Likes", globalState).value.uint;
+        if (getField("LIKES", globalState) !== undefined) {
+            likes = getField("LIKES", globalState).value.uint;
           }
       
-          if (getField("dislikes", globalState) !== undefined) {
-            dislikes = getField("dislikes", globalState).value.uint;
+          if (getField("DISLIKES", globalState) !== undefined) {
+            dislikes = getField("DISLIKES", globalState).value.uint;
           }
 
         return new Book(name, image, description, price, sold, likes, dislikes, appId, owner)
