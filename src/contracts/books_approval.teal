@@ -103,7 +103,6 @@ int 4
 assert
 txn Note
 byte "books:uv301"
-==
 assert
 txna ApplicationArgs 3
 btoi
