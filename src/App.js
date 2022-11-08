@@ -118,7 +118,7 @@ const App = function AppWrapper() {
                                     <span class="fa fa-star checked"></span>
                                 </div>
                                 <p class="testimonial-text">
-                                    For he best books this is the hub.
+                                    For the best book review this is the hub.
                                 </p>
 
                             </div>
