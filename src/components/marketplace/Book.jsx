@@ -39,7 +39,7 @@ const Book = ({ address, book, buyBook, deleteBook, likeBook,
                     <Form className="d-flex align-content-stretch flex-row gap-2">
                         <FloatingLabel
                             controlId="inputCount"
-                            label="Count"
+                            label="+"
                             className="w-25"
                         >
                             <Form.Control
